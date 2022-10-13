@@ -48,7 +48,6 @@ let handler = async(m, { conn: _conn }) => {
     conn.ev.on("connection.update", async({ qr, isNewLogin, lastDisconnect })=> {
       conn.ev.emit("multi.sessions", _conn)
       if(shouldSendLogin && conn.user) await _conn.sendMessage(conn.user.jid, { text: 'Conectado exitosamente con WhatsApp.\n*NOTA: Esto es solo un paseo*\n' + JSON.stringify(conn.user, null, 2) }, { quoted: m })
-        }
 
       if(qr) {
         if(lastQr) await lastQr.delete()
