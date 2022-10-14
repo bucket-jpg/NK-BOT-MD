@@ -1,4 +1,0 @@
-/**
-[ By @NeKosmic || https://github.com/NeKosmic/ ]
-**/
-import*as e from"fs";let handler=async(a,{conn:i,args:r})=>{if(!r[0])return a.reply("*[ ! ] Y el Link?*");if(!isUrl(r[0])&&!r[0].includes("https://www.mediafire.com/"))return a.reply("*[ ! ] Link invalido*\n_Por favor, use un link de MediaFire_");let l=await i.getName(a.sender),n=a.reply(MultiNK.Proces(l));await n;try{let t=await fetchJson(`https://latam-api.vercel.app/api/mediafiredl?apikey=${MyApiKey}&q=${r[0]}`);i.sendFile(a.chat,t.descarga,t.nombre,"",a,null,{mimetype:t.extension,asDocument:!0,jpegThumbnail:e.readFileSync("./multimedia/imagenes/logo.jpg")})}catch(d){a.reply(MultiNK.Error1())}};handler.help=["mediafire2 <Link>"],handler.tags=["servicio"],handler.command=/^(mediafire2)$/i,handler.limit=!0;export default handler;
