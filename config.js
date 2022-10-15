@@ -39,40 +39,12 @@ global.APIKeys = {
   'https://website': 'apikey'
 }
 
-global.multiplier = 50
+global.multiplier = 1000
 
 global.rpg = {
   emoticon(string) {
     string = string.toLowerCase()
-    let emot = {
-      role: '🏅',
-      level: '🧬',
-      limit: '🌌',
-      health: '❤️',
-      exp: '✉️',
-      money: '💵',
-      potion: '🥤',
-      diamond: '💎',
-      common: '📦',
-      uncommon: '🎁',
-      mythic: '🗳️',
-      legendary: '🗃️',
-      pet: '🎁',
-      trash: '🗑',
-      armor: '🥼',
-      sword: '⚔️',
-      wood: '🪵',
-      rock: '🪨',
-      string: '🕸️',
-      horse: '🐎',
-      cat: '🐈',
-      dog: '🐕',
-      fox: '🦊',
-      petFood: '🍖',
-      iron: '⛓️',
-      gold: '👑',
-      emerald: '💚'
-    }
+    let emot={role:"\uD83C\uDFC5",level:"\uD83E\uDDEC",limit:"\uD83C\uDF0C",salud:"❤️",exp:"✉️",nkoins:"\uD83D\uDCB5",elixir:"\uD83E\uDD64",diamante:"\uD83D\uDC8E",ordinario:"\uD83D\uDCE6",singular:"\uD83C\uDF81",mitico:"\uD83D\uDDF3️",legendario:"\uD83D\uDDC3️",mascota:"\uD83E\uDDF8",basura:"\uD83D\uDDD1",armadura:"\uD83E\uDD7C",espada:"⚔️",madera:"\uD83E\uDEB5",roca:"\uD83E\uDEA8",cuerda:"\uD83D\uDD78️",caballo:"\uD83D\uDC0E",neko:"\uD83D\uDC08",doge:"\uD83D\uDC15",zorro:"\uD83E\uDD8A",miMascot:"\uD83C\uDF56",hierro:"⛓️",oro:"\uD83D\uDC51",esmeralda:"\uD83D\uDC9A"};
     let results = Object.keys(emot).map(v => [v, new RegExp(v, 'gi')]).filter(v => v[1].test(string))
     if (!results.length) return ''
     else return emot[results[0][0]]
