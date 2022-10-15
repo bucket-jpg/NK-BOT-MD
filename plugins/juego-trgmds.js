@@ -1,27 +1,27 @@
 /**
 [ By @NeKosmic || https://github.com/NeKosmic/ ]
 **/
-import u from"../lib/database.js";let handler=async(D,{conn:e})=>{let d="\uD83C\uDF47",n="\uD83C\uDF4E",a="\uD83C\uDF53",s="\uD83D\uDD14",C="\uD83C\uDF51",r="\uD83D\uDCB0",l="\uD83E\uDD5D",F="☘️",t="\uD83C\uDF4C",i="\uD83C\uDF4B",c=[`${d}`,`${n}`,`${a}`,`${s}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],o=[`${d}`,`${n}`,`${a}`,`${s}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],m=[`${d}`,`${n}`,`${a}`,`${s}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],$=[`${d}`,`${n}`,`${a}`,`${s}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],_=[`${d}`,`${n}`,`${a}`,`${s}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],g=[`${d}`,`${n}`,`${a}`,`${s}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],h=[`${d}`,`${n}`,`${a}`,`${s}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],B=[`${d}`,`${n}`,`${a}`,`${s}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],E=[`${d}`,`${n}`,`${a}`,`${s}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],p=pickRandom(c),y=pickRandom(o),x=pickRandom(m),b=pickRandom($),f=pickRandom(_),q=pickRandom(g),J=pickRandom(h),M=pickRandom(B),j=pickRandom(E),T=`┃  | ${p} : ${y} : ${x}`,k=`┃  | ${b} : ${f} : ${q}`,v=`┃  | ${J} : ${M} : ${j}`;k.includes("\uD83C\uDF47 : \uD83C\uDF47 : \uD83C\uDF47")||k.includes("\uD83C\uDF4E : \uD83C\uDF4E : \uD83C\uDF4E")||k.includes("\uD83C\uDF53 : \uD83C\uDF53 : \uD83C\uDF53")||k.includes("\uD83D\uDD14 : \uD83D\uDD14 : \uD83D\uDD14")||k.includes("\uD83C\uDF51 : \uD83C\uDF51 : \uD83C\uDF51")||k.includes("\uD83D\uDCB0 : \uD83D\uDCB0 : \uD83D\uDCB0")||k.includes("\uD83E\uDD5D : \uD83E\uDD5D : \uD83E\uDD5D")||k.includes("☘️ : ☘️ : ☘️")||k.includes("\uD83C\uDF4C : \uD83C\uDF4C : \uD83C\uDF4C")||k.includes("\uD83C\uDF4B : \uD83C\uDF4B : \uD83C\uDF4B")?(e.sendMessage(D.chat,{text:`*Jugador : @${D.sender.replace(/@.+/,"")}*
+import u from"../lib/database.js";let handler=async(D,{conn:e})=>{let n="\uD83C\uDF47",d="\uD83C\uDF4E",s="\uD83C\uDF53",a="\uD83D\uDD14",C="\uD83C\uDF51",r="\uD83D\uDCB0",l="\uD83E\uDD5D",F="☘️",t="\uD83C\uDF4C",i="\uD83C\uDF4B",c=[`${n}`,`${d}`,`${s}`,`${a}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],o=[`${n}`,`${d}`,`${s}`,`${a}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],$=[`${n}`,`${d}`,`${s}`,`${a}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],m=[`${n}`,`${d}`,`${s}`,`${a}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],_=[`${n}`,`${d}`,`${s}`,`${a}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],g=[`${n}`,`${d}`,`${s}`,`${a}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],h=[`${n}`,`${d}`,`${s}`,`${a}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],B=[`${n}`,`${d}`,`${s}`,`${a}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],E=[`${n}`,`${d}`,`${s}`,`${a}`,`${C}`,`${r}`,`${l}`,`${F}`,`${t}`,`${i}`],p=pickRandom(c),k=pickRandom(o),x=pickRandom($),b=pickRandom(m),f=pickRandom(_),q=pickRandom(g),J=pickRandom(h),M=pickRandom(B),j=pickRandom(E),y=`┃  | ${p} : ${k} : ${x}`,T=`┃  | ${b} : ${f} : ${q}`,v=`┃  | ${J} : ${M} : ${j}`;T.includes("\uD83C\uDF47 : \uD83C\uDF47 : \uD83C\uDF47")||T.includes("\uD83C\uDF4E : \uD83C\uDF4E : \uD83C\uDF4E")||T.includes("\uD83C\uDF53 : \uD83C\uDF53 : \uD83C\uDF53")||T.includes("\uD83D\uDD14 : \uD83D\uDD14 : \uD83D\uDD14")||T.includes("\uD83C\uDF51 : \uD83C\uDF51 : \uD83C\uDF51")||T.includes("\uD83D\uDCB0 : \uD83D\uDCB0 : \uD83D\uDCB0")||T.includes("\uD83E\uDD5D : \uD83E\uDD5D : \uD83E\uDD5D")||T.includes("☘️ : ☘️ : ☘️")||T.includes("\uD83C\uDF4C : \uD83C\uDF4C : \uD83C\uDF4C")||T.includes("\uD83C\uDF4B : \uD83C\uDF4B : \uD83C\uDF4B")?(e.sendMessage(D.chat,{text:`*Jugador : @${D.sender.replace(/@.+/,"")}*
 *[ Felicidades, ganaste!!! ]* 🥳🎉
 
 *🎰=====🎉======🎰*
 *┃ ┌────────┐ ┃*
-*${T}*
+*${y}*
 *┃ ├────────┤ ┃*
-*${k} <==*
+*${T} <==*
 *┃ ├────────┤ ┃*
 *${v}*
 *┃ └────────┘ ┃*
 *🎰=====🎉======🎰*
 
 *Tu recompensa:* 
-+5000 de dinero`,mentions:[D.sender]},{quoted:D}),u.data.users[D.sender].money+=500):(u.data.users[D.sender].money<11||(u.data.users[D.sender].money-=10),e.sendMessage(D.chat,{text:`Jugador : @${D.sender.replace(/@.+/,"")}
++50000 de dinero`,mentions:[D.sender]},{quoted:D}),u.data.users[D.sender].nkoins+=5e4):(u.data.users[D.sender].nkoins<11||(u.data.users[D.sender].nkoins-=10),e.sendMessage(D.chat,{text:`Jugador : @${D.sender.replace(/@.+/,"")}
 
 🎰=====🪀======🎰
 ┃ ┌────────┐ ┃
-${T}
+${y}
 ┃ ├────────┤ ┃
-${k}
+${T}
 ┃ ├────────┤ ┃
 ${v}
 ┃ └────────┘ ┃
