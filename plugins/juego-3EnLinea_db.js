@@ -70,21 +70,21 @@ ${arr.slice(6).join('')}
 ❌= @${room.game.playerX.split('@')[0]}
 ⭕= @${room.game.playerO.split('@')[0]}
 
-~Escriba~ *rendirse* ~para darse por vencido~
+~Escriba :~ 
+
+rendirse 
+
+~para darse por vencido~
 
 ID de sala: ${room.id}
 `.trim()
         let users = db.data.users
         if ((room.game._currentTurn ^ isSurrender ? room.x : room.o) !== m.chat)
             room[room.game._currentTurn ^ isSurrender ? 'x' : 'o'] = m.chat
-        const btn = isTie ? ['TicTacToe', Prefijo+'ttt'] : ['RENDIRSE', 'rendirse']
+        //const btn = isTie ? ['TicTacToe', Prefijo+'ttt'] : ['RENDIRSE', 'rendirse']
         if (room.x !== room.o)
-            await this.sendButton(room.x, str, NombreDelBot, btn, m, {
-                mentions: this.parseMention(str)
-            })
-        await this.sendButton(room.o, str, NombreDelBot, btn, m, {
-            mentions: this.parseMention(str)
-        })
+            await this.reply(room.x, str, m, { mentions: this.parseMention(str)})
+        await this.reply(room.o, str, m, { mentions: this.parseMention(str)})
         if (isTie || isWin) {
             users[room.game.playerX].exp += playScore
             users[room.game.playerO].exp += playScore
