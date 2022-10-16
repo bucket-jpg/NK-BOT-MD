@@ -6,7 +6,7 @@ let handler = async (m, { conn, command, text }) => {
     let room = Object.values(conn.game).find(room => room.state === 'ESPERE' && (text ? room.name === text : true))
     // m.reply('[WIP Feature]')
     if (room) {
-        m.reply('Rival encontrado!\nᵉˢᶜʳᶦᵇᵃ ᵘⁿ ⁿᵘ́ᵐᵉʳᵒ ᵈᵉ ⁰ ᵃˡ ⁹ ᵖᵃʳᵃ ᶜᵒᵐᵉⁿᶻᵃʳ')
+        m.reply('Rival encontrado!\nᴱˡ ᶦⁿᶦᶜᶦᵃᵈᵒʳ ᵗᶦᵉⁿᵉ ᑫᵘᵉ ᶜᵒᵐᵉⁿᶻᵃʳ ᵉˡ ʲᵘᵉᵍᵒ ᵉˢᶜʳᶦᵇᶦᵉⁿᵈᵒ ᵘⁿ ⁿᵘ́ᵐᵉʳᵒ ᵈᵉ ⁰ ᵃˡ ⁹ ᵖᵃʳᵃ ᶜᵒᵐᵉⁿᶻᵃʳ')
         room.o = m.chat
         room.game.playerO = m.sender
         room.state = 'JUGANDO'
