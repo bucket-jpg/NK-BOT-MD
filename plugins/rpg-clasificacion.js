@@ -12,5 +12,5 @@ ${rpg.emoticon(e)}${e}
 • *${rpg.emoticon(d)}${d} p\xe1gina de ranking ${p} de ${s(d)}* •
 T\xfa: *${f.indexOf(r.sender)+1}* de *${f.length}*
 
-${c.slice(25*p,25*p+25).map((e,r)=>`${r+1}. ${a.some(r=>i(e.jid,r.id))?`(${n.getName(e.jid)}) wa.me/`:"@"}${e.jid.split`@`[0]} *${e[d]} ${rpg.emoticon(d)}${d}*`).join`\n`}
+${c.slice(25*p,25*p+25).map((e,r)=>`${r+1}. ${a.some(r=>i(e.jid,r.id))?`wa.me/${e.jid.split`@`[0]}`:""}(${n.getName(e.jid)}) *${e[d]} ${rpg.emoticon(d)}${d}*`).join`\n`}
 `.trim();return r.reply(g,null,{mentions:[...f.slice(25*p,25*p+25)].filter(e=>!a.some(r=>i(e,r.id)))})};handler.help=["ranking"],handler.tags=["xp"],handler.command=/^(ranking)$/i;export default handler;function sort(e,i=!0){return e?(...r)=>r[1&i][e]-r[1&!i][e]:(...e)=>e[1&i]-e[1&!i]}function toNumber(e,i=0){return e?(r,n,t)=>({...t[n],[e]:void 0===r[e]?i:r[e]}):e=>void 0===e?i:e}function enumGetKey(e){return e.jid}function isNumber(e){return e?"number"==typeof(e=parseInt(e))&&!isNaN(e):e}
