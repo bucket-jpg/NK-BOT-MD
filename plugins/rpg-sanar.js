@@ -1,4 +1,4 @@
-import e from"../lib/database.js";let handler=async(r,{args:i})=>{let a=e.data.users[r.sender];if(a.salud>=100)return r.reply(`
+import e from"../lib/database.js";let handler=async(r,{args:i})=>{if(!i[0])return r.reply("Proporcione una cantidad...");let a=e.data.users[r.sender];if(a.salud>=100)return r.reply(`
 Tu ❤️salud esta lleno
 `.trim());let l=40+4*a.cat,n=1*Math.max(1,Math.min(Number.MAX_SAFE_INTEGER,isNumber(i[0])&&parseInt(i[0])||Math.round((100-a.salud)/l)));if(a.elixir<n)return r.reply(`
 Tu 🥤elixir no es suficiente, tienes *${a.elixir}*
