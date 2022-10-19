@@ -22,6 +22,7 @@ let handler = async (m, { conn, args, command }) => {
 handler.help = ['mates <modo>']
 handler.tags = ['games']
 handler.command = /^mates/i
+handler.limit = 2
 handler.group = true
 
 let modes={kinder:[-3,3,-3,3,"+-",15e3,10],escuela:[-10,10,-10,10,"*/+-",2e4,40],colegio:[-40,40,-20,20,"*/+-",4e4,150],universidad:[-100,100,-70,70,"*/+-",6e4,350],maestro:[-999999,999999,-999999,999999,"*/",99999,9999],imposible:[-99999999999,99999999999,-99999999999,999999999999,"*/",3e4,35e3],wtf:[-999999999999999,999999999999999,-999,999,"/",3e4,5e4]}; // :V  //
