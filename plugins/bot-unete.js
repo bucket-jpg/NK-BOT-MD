@@ -7,21 +7,24 @@ let handler = async (m, { conn, text, isOwner, args }) => {
     let [_, code, expired] = text.match(linkRegex) || []
     if (!code) return m.reply('[ ! ] Error, El enlace no funciona o es inválido')
     let gpData = await conn.groupGetInviteInfo(code).catch(e => {})
-    let minUs = gpData.size
-    if (minUs <= MinimoDeUsuarios) return m.reply(`[ ! ] La cantidad mínima para unirme al grupo debe ser de *${MinimoDeUsuarios}* participantes`)
+    try {
+    if (gpData.size <= MinimoDeUsuarios) return m.reply(`[ ! ] La cantidad mínima para unirme al grupo debe ser de *${MinimoDeUsuarios}* participantes`)
     let res = await conn.groupAcceptInvite(code)
     expired = Math.floor(Math.min(999, Math.max(1, isOwner ? isNumber(expired) ? parseInt(expired) : 0 : 3)))
-    m.reply(`${NombreDelBot} se unió al grupo ${res} con éxito \n${expired ? `Durante ${expired} Hora(1-Hora)` : ''}`)
+    m.reply(`${NombreDelBot} se unió al grupo ${res} con éxito \n${expired ? `Durante ${expired} Hora(s)` : ''}`)
     let chats = db.data.chats[res]
     if (!chats) chats = db.data.chats[res] = {}
     if (expired) chats.expired = +new Date() + expired * 1000 * 60 * 60
+    } catch (e) {
+    m.reply(MultiNK.Error1())
+    }
 }
 
 handler.help = ['unete <Enlace de grupo>']
-handler.tags = ['premium', 'propietario']
+handler.tags = ['grupos']
 handler.command = /^(unete|entrabot|join)$/i
 handler.limit = 10
-handler.premium = false
+handler.group = true
 
 export default handler
 
