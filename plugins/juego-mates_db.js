@@ -18,7 +18,7 @@ handler.before = async function (m) {
             if (--this.math[id][2] == 0) {
                 clearTimeout(this.math[id][3])
                 delete this.math[id]
-                this.sendButton(m.chat, `*[ ! ] Se acabo el tiempo*\nRespuesta: *${math.result}*`, NombreDelBot, null, [['again', `/math ${math.mode}`]], m)
+                m.reply(`*[ ! ] Se acabo el tiempo*\nRespuesta: *${math.result}*`)
             } else m.reply(`*Respuesta incorrecta!*\nTe quedan ${this.math[id][2]} oportunidades`)
         }
     }
