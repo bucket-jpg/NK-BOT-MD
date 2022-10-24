@@ -1,3 +1,6 @@
+/**
+[ By @NeKosmic || https://github.com/NeKosmic/ ]
+**/
 import * as fs from 'fs'
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
@@ -19,7 +22,7 @@ conn.groupSettingUpdate(m.chat, 'not_announcement')
 
 handler.help = ['cgpen <tiempo>', 'agp']
 handler.tags = ['grupos', 'admins']
-handler.command = /^(cgpen)|(agp)$/i
+handler.command = /^(cgpen|agp)$/i
 
 handler.admin = true
 handler.botAdmin = true
