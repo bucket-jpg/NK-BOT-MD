@@ -6,6 +6,7 @@ import { plugins } from '../lib/plugins.js'
 import fetch from 'node-fetch';
 import { generateWAMessage } from "@adiwajshing/baileys"
 import * as fs from 'fs'
+import Connection from '../lib/connection.js'
 let tags = {
   //'contenido': 'Principal',
   'conversor': '_CONVERSORES :_',
@@ -14,7 +15,6 @@ let tags = {
   'propietario': '_CMDS DUEÑO :_',
   'herramienta': '_HERRAMIENTAS :_',
   'premium': '_PREMIUM :_',
-  'esclabot': '_SER SUB-BOT :_',
   'avanzado': '_AVANZADO :_',
   'admins': '_CMDS ADMINS :_',
   'grupos': '_CMDS GRUPOS :_',
@@ -24,6 +24,7 @@ let tags = {
   'xp': '_XP & LIMITE :_',
   'games': '_RPG, JUEGOS :_',
   'random': '_PASATIEMPO :_',
+  'esclabot': '_SER SUB-BOT :_',
   '': '_OTROS :_'
 }
 let handler = async (m, { conn, usedPrefix: _p, __dirname, command, isPrems }) => {
@@ -153,9 +154,9 @@ const defaultMenu = {
 ~|-------------------------|~
 *[_>] _COMANDOS_  ☷*
 ~|-------------------------|~\n`.trimStart(),
-  header: '╔「 %category 」\n║╭—————————',
-  body: '║├  %cmd %islimit %isPremium',
-  footer: '║╰—————————\n╚══════════\n',
+  header: `╔「 %category 」\n║╭—————————`,
+  body: `║├  %cmd %islimit %isPremium`,
+  footer: `║╰—————————\n╚══════════\n`,
   after: ``,
 }
 handler.help = ['menu']
