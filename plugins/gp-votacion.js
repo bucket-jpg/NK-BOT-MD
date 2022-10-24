@@ -1,3 +1,6 @@
+/**
+[ By @NeKosmic || https://github.com/NeKosmic/ ]
+**/
 let handler=async(a,{conn:o,text:t,isAdmin:e,isOwner:n,command:r,groupMetadata:i})=>{if(a.isGroup&&!(e||n))return dfail("admin",a,o);o.vote=o.vote?o.vote:{};let v=await o.getName(a.sender),l=a.chat;if(l in o.vote)return a.reply(`*[ ! ] Aun hay una votacion activa en el grupo*
 _Use el comando_ : ${Prefijo}reiniciarvotos _para crear nueva votacion_`);if(!t)return a.reply(`*Ingrese un motivo para la votacion, ejemplo:*
 
