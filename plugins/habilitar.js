@@ -281,6 +281,20 @@ let sections = [{
 			rowId: `${usedPrefix}apagar chatbot`
 		}
 	]
+},
+{
+	title: "[ ⬇️ SUB - BOTS ]",
+	rows: [{
+			title: "[ 🌳 Activar ]",
+			description: "~ᴬʰᵒʳᵃ ˡᵒˢ ᵖᵃʳᵗᶦᶜᶦᵖᵃⁿᵗᵉˢ ᵖᵘᵉᵈᵉⁿ ᵘˢᵃʳ ᵉˡ ᶜᵒᵐᵃⁿᵈᵒ ᵖᵃʳᵃ ˢᵉʳ ᵇᵒᵗˢ ᵗᵉᵐᵖᵒʳᵃˡᵉˢ~",
+			rowId: `${usedPrefix}encender yesclabots`
+		},
+		{
+			title: "[ 🌱 Desactivar ]",
+			description: "~ᴱˡ ᶜᵒᵐᵃⁿᵈᵒ ᵖᵃʳᵃ ˢᵉʳ ᵇᵒᵗ ⁿᵒ ᵖᵒᵈʳᵃ́ ˢᵉʳ ᵘˢᵃᵈᵒ~",
+			rowId: `${usedPrefix}encender noesclabots`
+		}
+	]
 }, ]
 
   switch (type) {
@@ -540,8 +554,30 @@ let sections = [{
       chat.simi = isEnable
       }
       break
+    case 'yesclabots': {
+      isAll = true
+      if (!isOwner) {
+        global.dfail('owner', m, conn)
+        throw false
+      }
+      bot.nkNspm = isEnable
+      bot.esclaBots = isEnable
+      fs.mkdirSync('./esclabots', { recursive: true })
+      }
+      break
+    case 'noesclabots': {
+    	if (2 < fs.readdirSync('./esclabots').length) return m.reply('_[ ! ] Despues de que un usuario ya uso el comando de *serbot*, no puedes desactivar esta opción..._')
+      isAll = true
+      if (!isOwner) {
+        global.dfail('owner', m, conn)
+        throw false
+      }
+      bot.nkNspm = !isEnable
+      bot.esclaBots = !isEnable
+      }
+      break
     default:
-      if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, { text: '┗⊱ Aqui tiene la lista de opciones :3', footer: '\n'+NombreDelBot, title: `\n┏━━⊱「 ${uwu} ${name}! 」`, buttonText: " Seleccione aqui ✓ ", sections }, { quoted: {key:{fromMe:!1,participant:`0@s.whatsapp.net`,...(m.chat?{remoteJid:"17608914335@s.whatsapp.net"}:{})},message:{"productMessage":{"product":{"productImage":{"mimetype":"image/jpeg","jpegThumbnail":fs.readFileSync('./multimedia/imagenes/mylogo.jpg')},"title":Propietario,"description":"[ NK-BOT ]","currencyCode":"PEN","priceAmount1000":"18000","retailerId":"Ghost","productImageCount":1},"businessOwnerJid":`0@s.whatsapp.net`}}} })
+      if (!/[01]/.test(command)) return await conn.sendMessage(m.chat, { text: '┗⊱ Aqui tiene la lista de opciones :3', footer: '\n'+NombreDelBot, title: `\n┏━━⊱「 ${uwu} ${name}! 」`, buttonText: " Seleccione aqui ✓ ", sections }, { quoted: {key:{fromMe:!1,participant:`0@s.whatsapp.net`,...(m.chat?{remoteJid:"17608914335@s.whatsapp.net"}:{})},message:{"productMessage":{"product":{"productImage":{"mimetype":"image/jpeg","jpegThumbnail":fs.readFileSync('./multimedia/imagenes/mylogo.jpg')},"title":Propietario,"description":"[ NK-BOT ]","currencyCode":"PEN","priceAmount1000":"19000","retailerId":"Ghost","productImageCount":1},"businessOwnerJid":`0@s.whatsapp.net`}}} })
       throw false
   }
   await conn.sendMessage(m.chat, { text: `\n@${etiqueta.replace(/@.+/, '')} ${isEnable ? 'activó' : 'desactivó'} *${type}* exitosamente ${isAll ? 'para este bot' : isUser ? '' : 'para este chat'}\n`, mentions: [m.sender] }, {ephemeralExpiration: 24*3600,quoted: {key : {participant : '0@s.whatsapp.net'},message: {documentMessage: {title: `${isEnable ? '[✓]' : '[X]'}`,jpegThumbnail: fs.readFileSync('./multimedia/imagenes/mylogo.jpg') }}}})
