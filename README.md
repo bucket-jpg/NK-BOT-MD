@@ -22,18 +22,26 @@
 | Bienvenida automática|✔️|
 | Anti-Link|✔️|
 | Anti-Fakes|✔️|
+| Jadibot-vBeta|✔️|
 | Anti-Estranjeros|✔️|
-| Anti-Flood|✔️|
+| Anti-Spam(Command flood)|✔️|
 | Anti-Llamadas|✔️|
 | Anti-Privados|✔️|
 | Modo Publico/Privado|✔️|
 | Herramientas de edición|✔️|
+| Creador de logos|✔️|
 | Anime|✔️|
 | Juegos|✔️|
 | Descarga de música/videos|✔️|
+| Chat-Bot|✔️|
+| Botones clásicos|✔️|
+| Random commands|✔️|
+| NSFW|🔞|
 | Más funciones en adelante|♻️|
 
-# 📲 Instalacion
+# 📲 Instalación en varias plataformas...
+
+# 🪀 Termux
 Para nuevos desde cero en termux:
 ```bash
 > termux-setup-storage
@@ -59,7 +67,8 @@ Para nuevos desde cero en termux:
 Para detener al bot en termux:
 > Ctrl+c
 ```
-# 🔥Ejecutar el bot 24/7 
+
+# 🔥 Ejecutar el bot 24/7 
 - Es aconsejable que subas la carpeta "./sesiones/creds.json" ya activado, para ya no tener que escanear otro código QR x'd
 
 ## Desplegable en Railway & Heroku
