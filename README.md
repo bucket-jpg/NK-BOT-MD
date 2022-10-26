@@ -39,10 +39,10 @@
 | NSFW|🔞|
 | Más funciones en adelante|♻️|
 
-# 📲 Instalación en varias plataformas...
+# 🪀 Instalación en varias plataformas...
 
-# 🪀 Termux
-Para nuevos desde cero en termux:
+# 📲Termux
+Para nuevos desde cero en termux.apk:
 ```bash
 > termux-setup-storage
 (Dan permiso a su almacenamiento)
@@ -69,14 +69,14 @@ Para detener al bot en termux:
 ```
 
 # 🔥 Ejecutar el bot 24/7 
-- Es aconsejable que subas la carpeta "./sesiones/creds.json" ya activado, para ya no tener que escanear otro código QR x'd
+- Es aconsejable que crees una carpeta llamada "./sesiones/", luego subas el archivo de "creds.json" ya activado, para ya no tener que escanear otro código QR x'd
 
 ## Desplegable en Railway & Heroku
 - Railway => https://railway.app/new/template?template=URL_del_repositorio_actual
 
 - Heroku => https://heroku.com/deploy?template=URL_del_repositorio_actual
 
-## Necesitas ayuda?, Aquí tienes mi WhatsApp :3
+# ⚡ Necesitas ayuda?, Aquí tienes mi WhatsApp :3
 
 <a href="https://wa.me/51995386439"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" />
 
