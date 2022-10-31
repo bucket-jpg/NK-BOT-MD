@@ -1,7 +1,7 @@
 {
     "name": "NK-BOT",
     "version": "1.0.0",
-    "description": "WhatsApp bot NK versión Multidevice :3",
+    "description": "WhatsApp bot NK versión Multidevice espero te guste :3",
     "main": "nkbot.js",
     "type": "module",
     "directories": {
@@ -22,7 +22,7 @@
     ],
     "homepage": "",
     "author": {
-        "name": "Matt_Mdz"
+        "name": "NeKosmic"
     },
     "repository": {
         "type": "git",
@@ -31,6 +31,7 @@
     "bugs": {
         "url": ""
     },
+    "waHost": "",
     "license": "GNU",
     "dependencies": {
         "@adiwajshing/baileys": "^4.4.0",
