@@ -19,7 +19,7 @@ import moment from 'moment-timezone'
 //     }]
 //   }]
 // }
-let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isROwner }) => {
+let handler = async (m, { conn, usedPrefix, command, args, isAdmin, isOwner }) => {
   let isEnable = /encender|1/i.test(command)
   let chat = db.data.chats[m.chat]
   let user = db.data.users[m.sender]
@@ -475,7 +475,7 @@ let sections = [{
       break
     case 'atender': case 'nyimak': {
       isAll = true
-      if (!isROwner) {
+      if (!isOwner) {
         global.dfail('rowner', m, conn)
         throw false
       }
@@ -484,7 +484,7 @@ let sections = [{
       break
     case 'autoleer': case 'autoread': {
       isAll = true
-      if (!isROwner) {
+      if (!isOwner) {
         global.dfail('rowner', m, conn)
         throw false
       }
@@ -493,7 +493,7 @@ let sections = [{
       break
     case 'pconly': case 'privateonly': {
       isAll = true
-      if (!isROwner) {
+      if (!isOwner) {
         global.dfail('rowner', m, conn)
         throw false
       }
@@ -502,7 +502,7 @@ let sections = [{
       break
     case 'gconly': case 'grouponly': {
       isAll = true
-      if (!isROwner) {
+      if (!isOwner) {
         global.dfail('rowner', m, conn)
         throw false
       }
@@ -511,7 +511,7 @@ let sections = [{
       break
     case 'noprivado': {
       isAll = true
-      if (!isROwner) { 
+      if (!isOwner) { 
       	global.dfail('rowner', m, conn)
       throw false
       }
@@ -520,7 +520,7 @@ let sections = [{
       break
     case 'swonly': case 'statusonly': {
       isAll = true
-      if (!isROwner) {
+      if (!isOwner) {
         global.dfail('rowner', m, conn)
         throw false
       }
