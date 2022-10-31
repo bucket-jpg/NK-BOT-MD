@@ -1,17 +1,8 @@
 /**
 [ By @NeKosmic || https://github.com/NeKosmic/ ]
 **/
-let handler = async (m, { conn, args }) => {
-	if (!args[0]) return
-	if(!isUrl(args[0]) && !args[0].includes('youtube.com')) return
-	let name = await conn.getName(m.sender)
-	let sections=[{title:"⏺️ - ⏮️ ⏸️ ⏭️ - \uD83D\uDD00",rows:[{title:"*[ > ] Descarga*",description:"1.- audio",rowId:`${Prefijo}ytmp3 ${args[0]}`},{title:"*[ > ] Descarga*",description:"2.- audio",rowId:`${Prefijo}yta ${args[0]}`},{title:"*[ > ] Descarga*",description:"3.- audio",rowId:`${Prefijo}ytabochi ${args[0]}`}]},{title:"\uD83C\uDFA6 - ⏮️ ⏸️ ⏭️ - \uD83D\uDD00",rows:[{title:"*[ > ] Descarga*",description:"1.- video",rowId:`${Prefijo}ytmp4 ${args[0]}`},{title:"*[ > ] Descarga*",description:"2.- video",rowId:`${Prefijo}ytv ${args[0]}`},{title:"*[ > ] Descarga*",description:"3.- video",rowId:`${Prefijo}ytvbochi ${args[0]}`}]}];
-try {
-await conn.sendMessage(m.chat, { text: `┗━━━━━━━━━━━━━━━━━━━`, footer: '\n'+NombreDelBot, title: `┏━━━━━━━━━━━━━━━━━━━\n${args[0]}`, buttonText: " Seleccione una opción ", sections }, { quoted: m })
-} catch (e) {
-m.reply(MultiNK.Error0())
-}
-}
+let handler=async(t,{conn:e,args:i})=>{if(!i[0]||!isUrl(i[0])&&!i[0].includes("youtube.com"))return;await e.getName(t.sender);let r=[{title:"⏺️ - ⏮️ ⏸️ ⏭️ - \uD83D\uDD00",rows:[{title:"*[ > ] Descargar Audio*",description:"_Opci\xf3n 1_",rowId:`${Prefijo}ytmp3 ${i[0]}`},{title:"*[ > ] Descargar Audio*",description:"_Opci\xf3n 2_",rowId:`${Prefijo}yta ${i[0]}`},{title:"*[ > ] Descargar Audio*",description:"_Opci\xf3n 3_",rowId:`${Prefijo}ytabochi ${i[0]}`}]},{title:"\uD83C\uDFA6 - ⏮️ ⏸️ ⏭️ - \uD83D\uDD00",rows:[{title:"*[ > ] Descargar Video*",description:"_Opci\xf3n 1_",rowId:`${Prefijo}ytmp4 ${i[0]}`},{title:"*[ > ] Descargar Video*",description:"_Opci\xf3n 2_",rowId:`${Prefijo}ytv ${i[0]}`},{title:"*[ > ] Descargar Video*",description:"_Opci\xf3n 3_",rowId:`${Prefijo}ytvbochi ${i[0]}`}]}];try{await e.sendMessage(t.chat,{text:`┗━━━━━━━━━━━━━━━━━━`,footer:"\n"+NombreDelBot,title:`┏━━━━━━━━━━━━━━━━━━
+${i[0]}`,buttonText:" Seleccione una opci\xf3n ",sections:r},{quoted:t})}catch(o){t.reply(MultiNK.Error0())}};
 
 //handler.help = ['listytdl <link>']
 handler.tags = ['servicio']
