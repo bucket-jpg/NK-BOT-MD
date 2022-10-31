@@ -363,7 +363,7 @@ let sections = [{
     case 'publico': case 'public': {
       isAll = true
       if (!isOwner) {
-        global.dfail('owner', m, conn)
+        global.dfail('rowner', m, conn)
         throw false
       }
       global.opts['self'] = !isEnable
@@ -467,7 +467,7 @@ let sections = [{
     case 'restringir': case 'restrict': {
       isAll = true
       if (!isOwner) {
-        global.dfail('owner', m, conn)
+        global.dfail('rowner', m, conn)
         throw false
       }
       bot.restrict = isEnable
@@ -557,7 +557,7 @@ let sections = [{
     case 'yesclabots': {
       isAll = true
       if (!isOwner) {
-        global.dfail('owner', m, conn)
+        global.dfail('rowner', m, conn)
         throw false
       }
       bot.nkNspm = isEnable
@@ -569,7 +569,7 @@ let sections = [{
     	if (2 < fs.readdirSync('./esclabots').length) return m.reply('_[ ! ] Despues de que un usuario ya uso el comando de *serbot*, no puedes desactivar esta opción..._')
       isAll = true
       if (!isOwner) {
-        global.dfail('owner', m, conn)
+        global.dfail('rowner', m, conn)
         throw false
       }
       bot.nkNspm = !isEnable
