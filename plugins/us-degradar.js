@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, command }) => {
 	reacMoji(m.chat, conn, '⚔️', m)
 }
 
-handler.help = ['darpoder @usuario']
+handler.help = ['quitarpoder @usuario']
 handler.tags = ['grupos', 'admins']
 handler.command = /^(quitarpoder|degradar|demote|quitaradmin)$/i
 handler.group = true
