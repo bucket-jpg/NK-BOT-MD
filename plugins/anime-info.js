@@ -1,7 +1,7 @@
 /**
 [ By @NeKosmic || https://github.com/NeKosmic/ ]
 **/
-let handler=async(a,{conn:e,text:i})=>{if(!i)return reply(`Que anime desea buscar?, ejemplo de uso:
+let handler=async(a,{conn:e,text:i})=>{if(!i)return a.reply(`Que anime desea buscar?, ejemplo de uso:
 
 ${Prefijo+command} nichijou
 `);let r;await a.reply(MultiNK.Bsqd(await e.getName(a.sender)));let t=encodeURIComponent(i);try{let n=(await fetchJson(`https://api.jikan.moe/v4/anime?q=${t}`)).data[0],s=n.images.jpg.image_url?n.images.webp.image_url:n.images.jpg.large_image_url?n.images.webp.large_image_url:"https://github.com/NeKosmic/NK-BOT/raw/main/multimedia/imagenes/anim_vers.jpg",o=`[ ${n.title} - Comun ], [ ${n.title_english} - Ingles ], [ ${n.title_japanese} - Japon\xe9s ]`;try{var l=`*🔥 Productora:* ${n.producers[0].name||"-"}
