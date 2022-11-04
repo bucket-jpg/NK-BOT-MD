@@ -4,9 +4,7 @@ import { join } from 'path'
 import { xpRange } from '../lib/levelling.js'
 import { plugins } from '../lib/plugins.js'
 import fetch from 'node-fetch';
-import { generateWAMessage } from "@adiwajshing/baileys"
 import * as fs from 'fs'
-import Connection from '../lib/connection.js'
 let tags = {
   //'contenido': 'Principal',
   'conversor': '_CONVERSORES :_',
@@ -129,7 +127,7 @@ buttons: [{buttonId: Prefijo+`apoyo`, buttonText: {displayText: "[ APOYO ]"}, ty
 headerType: 4,
 ...{ contextInfo: { mentionedJid: [m.sender], externalAdReply: { thumbnail: fs.readFileSync('./multimedia/imagenes/logo.jpg'), sourceUrl: 'https://github.com/NeKosmic/NK-BOT-MD/fork?rgh-fork=true' }}}
 }, { quoted: m }) 
-reacMoji(m.chat, conn, '📃', m)
+//reacMoji(m.chat, conn, '📃', m)
   } catch (e) {
     conn.reply(m.chat, '[ ! ] Ocurrio un error en el menú :/ ', m)
     throw e
@@ -159,11 +157,11 @@ const defaultMenu = {
   footer: `║╰—————————\n╚══════════\n`,
   after: ``,
 }
-handler.help = ['menu']
+handler.help = ['menucompleto', 'menuprincipal']
 //handler.tags = ['contenido']
-handler.command = /^(menu|comandos|menú|help)$/i
+handler.command = /^(menucompleto|menuprincipal)$/i
 
-handler.exp = 5
+handler.exp = 10
 
 export default handler
 
