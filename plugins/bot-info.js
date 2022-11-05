@@ -1,7 +1,7 @@
 /**
 [ By @NeKosmic || https://github.com/NeKosmic/ ]
 **/
-import e from"../lib/connection.js";import{plugins as t}from"../lib/plugins.js";import{cpus as a,totalmem as i,freemem as o,platform as s,type as r,arch as n,hostname as m}from"os";import{performance as l}from"perf_hooks";import{sizeFormatter as d}from"human-readable";import c from"performance-now";let{generateWAMessageFromContent:p}=(await import("@adiwajshing/baileys")).default,format=d({std:"JEDEC",decimalPlaces:2,keepTrailingZeroes:!1,render:(e,t)=>`${e} ${t}B`}),handler=async(d,{conn:u})=>{let h=Object.entries(e.store.chats).filter(([e,t])=>e&&t.isChats),g=h.filter(([e])=>e.endsWith("@g.us")),f=process.memoryUsage(),$=a().map(e=>(e.total=Object.keys(e.times).reduce((t,a)=>t+e.times[a],0),e)),y=$.reduce((e,t,a,{length:i})=>(e.total+=t.total,e.speed+=t.speed/i,e.times.user+=t.times.user,e.times.nice+=t.times.nice,e.times.sys+=t.times.sys,e.times.idle+=t.times.idle,e.times.irq+=t.times.irq,e),{speed:0,total:0,times:{user:0,nice:0,sys:0,idle:0,irq:0}}),w=d.reply("_Obteniendo informaci\xf3n..._");await w;let b=l.now(),j=l.now()-b,C=c(),k=c()-C,_=m().includes("localhost")?"Servidor personal":m(),v=Math.floor(process.uptime())>86400?"Hits totales":"Hits de hoy",P=timeString(process.uptime()),A="‎".repeat(850);try{let U=await fetch("https://pastebin.com/raw/Bu8esjPA"),x=await u.profilePictureUrl(u.user.jid,"image").catch(e=>"./multimedia/imagenes/avatar_contact.png");var M,B=(await U.json()).nk_media||x}catch(E){var B=await u.profilePictureUrl(u.user.jid,"image").catch(e=>"./multimedia/imagenes/avatar_contact.png")}let T=`
+import e from"../lib/connection.js";import{plugins as t}from"../lib/plugins.js";import{cpus as a,totalmem as i,freemem as o,platform as s,type as n,arch as r,hostname as m}from"os";import{performance as l}from"perf_hooks";import{sizeFormatter as d}from"human-readable";import c from"performance-now";let{generateWAMessageFromContent:p}=(await import("@adiwajshing/baileys")).default,format=d({std:"JEDEC",decimalPlaces:2,keepTrailingZeroes:!1,render:(e,t)=>`${e} ${t}B`}),handler=async(d,{conn:u})=>{let h=Object.entries(e.store.chats).filter(([e,t])=>e&&t.isChats),g=h.filter(([e])=>e.endsWith("@g.us")),f=process.memoryUsage(),$=a().map(e=>(e.total=Object.keys(e.times).reduce((t,a)=>t+e.times[a],0),e)),y=$.reduce((e,t,a,{length:i})=>(e.total+=t.total,e.speed+=t.speed/i,e.times.user+=t.times.user,e.times.nice+=t.times.nice,e.times.sys+=t.times.sys,e.times.idle+=t.times.idle,e.times.irq+=t.times.irq,e),{speed:0,total:0,times:{user:0,nice:0,sys:0,idle:0,irq:0}}),w=d.reply("_Obteniendo informaci\xf3n..._");await w;let b=l.now(),j=l.now()-b,C=c(),k=c()-C,_=m().includes("localhost")?"Servidor personal":m(),v=Math.floor(process.uptime())>43200?"Hits totales":"Hits en los \xfaltimos minutos",P=timeString(process.uptime()),A="‎".repeat(850);try{let U=await fetch("https://pastebin.com/raw/Bu8esjPA"),x=await u.profilePictureUrl(u.user.jid,"image").catch(e=>"./multimedia/imagenes/avatar_contact.png");var M,B=(await U.json()).nk_media||x}catch(E){var B=await u.profilePictureUrl(u.user.jid,"image").catch(e=>"./multimedia/imagenes/avatar_contact.png")}let T=`
 *~》INFORMACI\xd3N《~*
 ${A}
 ┏─━─━━──━━─━─┓
@@ -23,8 +23,8 @@ ${A}
 ➪ *Velocidad de conexion* : _${k.toFixed(4)}ms..._
 ➪ *RAM:* _${format(i()-o())} Restantes De ${format(i())}_
 ➪ *Plataforma* : _${s()}_
-➪ *Base OS* : _${r()}_
-➪ *Arquitectura* : _${n()}_
+➪ *Base OS* : _${n()}_
+➪ *Arquitectura* : _${r()}_
 ➪ *Host* : _${_}_
 
 ➫ _Consum\xf3 de memoria :_
