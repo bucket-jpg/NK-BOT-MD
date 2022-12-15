@@ -22,7 +22,7 @@ global.MyApiKey = 'nekosmic' //zzz
 global.NombreDelBot = 'BUCKET-BOT' //vMD
 global.BotVersion = dPkg.version
 global.TusRedesSociales = "[ > ] Canal de Youtube:\n- https://youtube.com/channel/UC_Pp8pT9vbT15k5_-i6oseA\n\n[ f ] Página de Facebook:\n- https://fb.watch/b7pj-i5ejP/\n\n[Ꮄ] Tiktok:\n- https://vm.tiktok.com/ZMLjAbySN/\n\nᴺᵒ ᵖᶦᵈᵒ ᵈᶦⁿᵉʳᵒ⁻ ˢᵒˡᵒ ᶜᵒⁿ ᵗᵘ ᵃᵖᵒʸᵒ ˢᵒʸ ᶠᵉˡᶦᶻ  :³"
-global.UsLimitesCmd = '20'
+global.UsLimitesCmd = '200'
 global.MinimoDeUsuarios = '2'
 
 global.owner = [
