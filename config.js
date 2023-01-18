@@ -15,13 +15,13 @@ const dPkg = require(join(__dirname, './package.json'))
 //
 global.MultiNK = es; //Lenguaje nativo
 global.Propietario = dPkg.author.name
-global.OwnerNum = '528442720931'
-global.PaisPrefix = '52'
+global.OwnerNum = '5491139401739'
+global.PaisPrefix = '54'
 global.Prefijo = '.'
 global.MyApiKey = 'bucket' //zzz
-global.NombreDelBot = 'BUCKET-BOT' //vMD
+global.NombreDelBot = 'thixggo-BOT' //vMD
 global.BotVersion = dPkg.version
-global.TusRedesSociales = "número wa.me/+528442720931 IG: Bucket_Cereal FB: BucketGodman"
+global.TusRedesSociales = "número wa.me/5491139401739 IG: @thixggo"
 global.UsLimitesCmd = '200'
 global.MinimoDeUsuarios = '2'
 
